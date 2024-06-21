@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+    const pathName = usePathname();
   const navItems = [
     {
       title: "Home",
@@ -17,7 +19,7 @@ const Navbar = () => {
     },
     {
       title: "Portfolio",
-      path: "/",
+      path: "/portfolio",
     },
     {
       title: "Contact",
@@ -27,10 +29,10 @@ const Navbar = () => {
 
   return (
     <div className="bg-primary/20 fixed top-0 left-0 right-0">
-      <div className="navbar lg:w-10/12 mx-auto">
+      <div className="navbar lg:w-10/12 mx-auto px-4">
         <div className="navbar-start">
           <a className="lg:text-3xl text-2xl font-medium">
-            Rakib <span className="text-[#ff6700]">Hossen.</span>
+            Rakib <span className="text-primary">Hossen.</span>
           </a>
         </div>
         <div className=" lg:flex"></div>
@@ -39,7 +41,10 @@ const Navbar = () => {
             <ul className="space-x-9 menu-horizontal px-1">
               {navItems.map((item, idx) => (
                 <li key={idx}>
-                  <Link className="font-medium" href={item.path}>
+                  <Link
+                    href={item.path}
+                    className={`${pathName === item.path ? "text-secondary font-semibold" : 'font-medium'}`}
+                  >
                     {item.title}
                   </Link>
                 </li>
