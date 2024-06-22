@@ -1,0 +1,58 @@
+[
+  {
+    "title": "ChatSphere",
+    "description": "An  online forum platform with  user authentication, responsive design, and functionalities for posts, comments, and votes. Includes user and admin dashboards",
+    "link": "https://chatspher.web.app/",
+    "github": "https://github.com/RakibHossen678/chatSpre-Client",
+    "image": "https://i.ibb.co/7KbGHCm/chat-Spere.png"
+  },
+  {
+    "title": "CareKitchen",
+    "description": "An online food sharing platform with  user authentication, responsive design, functionalities for adding, managing, and requesting food donations",
+    "link": "https://assignment11-736a2.web.app/",
+    "github": "https://github.com/RakibHossen678/CareKitchen-Client",
+    "image": "https://i.ibb.co/Tgg5SS7/care-Kitchen.png"
+  },
+  {
+    "title": "CreativeCanvasHub",
+    "description": "An online platform for sharing and managing art and craft items.This platform allows users to add, manage, and view art and craft items.",
+    "link": "https://assignment10-a34c2.web.app/",
+    "github": "https://github.com/RakibHossen678/CreativeCanvasHub-Client/blob/main/README.md",
+    "image": "https://i.ibb.co/2NmFbsh/creative-Canvas-Hub.png"
+  },
+  {
+    "title": "HavenlyHomes",
+    "description": "An online platform for discovering and managing residential properties.The platform features a dynamic homepage, detailed property pages, and user-specific functionalities.",
+    "link": "https://assignment9-b30a7.web.app/",
+    "github": "https://github.com/RakibHossen678/HavenlyHomes",
+    "image": "https://i.ibb.co/QC4LG4z/havenly-Home.png"
+  },
+  {
+    "title": "BookRiot",
+    "description": "A book selling platform for to explore, manage, and interact with a wide range of books.This platform allows users to and wishlist.",
+    "link": "https://ubiquitous-puffpuff-8b1b82.netlify.app/",
+    "github": "https://github.com/RakibHossen678/BookRiot",
+    "image": "https://i.ibb.co/jyfhD1w/BookRiot.png"
+  },
+  {
+    "title": "Recipe Calories",
+    "description": "An online platform where users can discover new recipes.The platform aims to provide users with a new way to explore different recipes, thereby creating a seamless experience for those interested in cooking.",
+    "link": "https://monumental-smakager-9dc451.netlify.app/",
+    "github": "https://github.com/RakibHossen678/Recipe-Calories",
+    "image": "https://i.ibb.co/DL1DzgY/recipe.png"
+  },
+  {
+    "title": "NewsSphere",
+    "description": "An online forum platform where users can read and engage with blog posts on various topics.",
+    "link": "https://65e576abb57cf0286506b7cc--teal-croquembouche-11cca7.netlify.app/",
+    "github": "https://github.com/RakibHossen678/NewsSphere",
+    "image": "https://i.ibb.co/YB00X3S/news-Spher.png"
+  },
+  {
+    "title": "Greenline-Ticket",
+    "description": "An online platform for booking bus tickets.This platform allows user to know about routes, book a bus ticket and user can apply coupon code.",
+    "link": "https://rakibhossen678.github.io/Greenline-Ticket/",
+    "github": "https://github.com/RakibHossen678/Greenline-Ticket",
+    "image": "https://i.ibb.co/7YLWCJp/Greenline-Ticket.png"
+  }
+]
