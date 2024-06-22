@@ -17,8 +17,7 @@ export default function RootLayout({ children }) {
         <div>
           <div>
             <div className="h-[62px]">
-
-            <Navbar></Navbar>
+              <Navbar></Navbar>
             </div>
           </div>
           {children}

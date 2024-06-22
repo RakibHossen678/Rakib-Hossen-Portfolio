@@ -1,3 +1,4 @@
+import About from "@/Components/About";
 import Banner from "@/Components/Banner";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <main className="min-h-[calc(100vh-114px)]">
       <div className="w-9/12 mx-auto">
         <Banner></Banner>
+        <About></About>
       </div>
     </main>
   );

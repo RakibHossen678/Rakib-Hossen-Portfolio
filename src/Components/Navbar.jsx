@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-    const pathName = usePathname();
+  const pathName = usePathname();
   const navItems = [
     {
       title: "Home",
@@ -14,12 +14,8 @@ const Navbar = () => {
       path: "/about",
     },
     {
-      title: "Services",
-      path: "/services",
-    },
-    {
-      title: "Portfolio",
-      path: "/portfolio",
+      title: "Work",
+      path: "/work",
     },
     {
       title: "Contact",
@@ -28,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="bg-primary/20 fixed top-0 left-0 right-0">
+    <div className="bg-primary/20 fixed top-0 left-0 right-0 z-10">
       <div className="navbar lg:w-10/12 mx-auto px-4">
         <div className="navbar-start">
           <a className="lg:text-3xl text-2xl font-medium">
@@ -43,7 +39,11 @@ const Navbar = () => {
                 <li key={idx}>
                   <Link
                     href={item.path}
-                    className={`${pathName === item.path ? "text-secondary font-semibold" : 'font-medium'}`}
+                    className={`${
+                      pathName === item.path
+                        ? "text-secondary font-semibold"
+                        : "font-medium"
+                    }`}
                   >
                     {item.title}
                   </Link>
