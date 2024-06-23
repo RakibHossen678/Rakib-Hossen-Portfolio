@@ -12,9 +12,6 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      hover: {
-        block: 'hover:block', // This creates a new 'hover:block' utility class
-      },
     },
   },
   plugins: [require("daisyui")],
@@ -30,7 +27,6 @@ module.exports = {
         },
       },
       "dark",
-      
     ],
   },
 };
