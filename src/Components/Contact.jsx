@@ -2,6 +2,7 @@
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
+import toast from "react-hot-toast";
 const Contact = () => {
   const handleEmail = async (e) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ const Contact = () => {
     });
     if (res.ok) {
       console.log("message send");
+      toast.success("Email send successfully");
     }
   };
   return (

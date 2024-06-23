@@ -15,7 +15,7 @@ export async function POST(req) {
     from: email,
     to: process.env.NEXT_PUBLIC_TRANSPORTER_EMAIL,
     subject: subject,
-    text: message,
+    text: `${message} from ${email}`,
   };
   try {
     await transporter.sendMail(mailOptions);
