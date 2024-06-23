@@ -32,6 +32,12 @@ export default function Home() {
           </h1>
         </div>
         <Project></Project>
+        <div className="text-center py-5 ">
+          <h1 className="text-4xl text-secondary  font-semibold">
+            Contact <span className="text-primary">Me</span>
+          </h1>
+          <p className="text-gray-600  font-medium pt-2">Get In Touch</p>
+        </div>
         <Contact></Contact>
       </div>
     </main>
