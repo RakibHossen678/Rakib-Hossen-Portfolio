@@ -8,7 +8,7 @@ const Skills = () => {
         <h1 className="text-4xl text-secondary  font-semibold">Skills</h1>
         <p className="text-gray-600 pt-1 font-medium">My Technical Level</p>
       </div>
-      <div className="grid grid-cols-2 gap-4 my-10">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 my-10">
         <div className="flex  items-center space-x-4">
           <Image alt="html" width={62} height={62} src="/html.png" />
           <progress

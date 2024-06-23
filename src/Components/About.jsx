@@ -10,7 +10,7 @@ const About = () => {
         </h1>
       </div>
       <div className="mt-6 flex flex-col lg:flex-row items-center justify-between space-x-6">
-        <div className=" w-[35%] rounded-md">
+        <div className=" lg:w-[35%] rounded-md">
           <Image
             className="rounded-lg"
             quality={100}
@@ -21,7 +21,7 @@ const About = () => {
             src="/about.png"
           />
         </div>
-        <div className="w-[60%]">
+        <div className="lg:w-[60%]">
           <h1 className="text-lg font-medium text-secondary py-2">
             I am Rakib Hossen{" "}
           </h1>
