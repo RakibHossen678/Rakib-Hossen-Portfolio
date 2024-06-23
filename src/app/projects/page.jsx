@@ -1,5 +1,4 @@
 import Project from "@/Components/Project";
-import Image from "next/image";
 
 const page = () => {
   return (

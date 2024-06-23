@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 const nodemailer = require("nodemailer");
 export async function POST(req) {
   const { name, subject, email, message } = await req.json();
@@ -19,12 +21,12 @@ export async function POST(req) {
   };
   try {
     await transporter.sendMail(mailOptions);
-    return new Response(
+    return  NextResponse(
       JSON.stringify({ message: "Email sent successfully" }),
       { status: 200 }
     );
   } catch (error) {
-    return new Response(JSON.stringify({ error: "Error sending email" }), {
+    return  NextResponse(JSON.stringify({ error: "Error sending email" }), {
       status: 500,
     });
   }
