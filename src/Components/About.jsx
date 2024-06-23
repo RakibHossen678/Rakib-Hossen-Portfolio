@@ -6,7 +6,7 @@ const About = () => {
     <div className="my-20">
       <div className="text-center">
         <h1 className="text-4xl text-secondary  py-5 font-semibold">
-          About Me
+          About <span className="text-primary">Me</span>
         </h1>
       </div>
       <div className="mt-6 flex flex-col lg:flex-row items-center justify-between space-x-6">
