@@ -14,8 +14,8 @@ const Navbar = () => {
       path: "/about",
     },
     {
-      title: "Works",
-      path: "/works",
+      title: "Projects",
+      path: "/projects",
     },
     {
       title: "Contact",
@@ -41,7 +41,7 @@ const Navbar = () => {
                     href={item.path}
                     className={`${
                       pathName === item.path
-                        ? "text-secondary font-semibold"
+                        ? "text-secondary font-semibold border-b-2 border-b-secondary"
                         : "font-medium"
                     }`}
                   >

@@ -19,10 +19,7 @@ const Project = () => {
   console.log(projects);
   return (
     <div className="my-20">
-      <div className="text-center">
-        <h1 className="text-4xl text-secondary  py-5 font-semibold">
-          Latest <span className="text-primary">Projects</span>
-        </h1>
+      <div className="">
         <div className="mt-10">
           {loading ? (
             <section class="bg-white dark:bg-gray-900">

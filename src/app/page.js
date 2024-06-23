@@ -13,6 +13,11 @@ export default function Home() {
         <Skills></Skills>
       </div>
       <div className="lg:w-10/12 mx-auto">
+        <div className="text-center">
+          <h1 className="text-4xl text-secondary  py-5 font-semibold">
+            Latest <span className="text-primary">Projects</span>
+          </h1>
+        </div>
         <Project></Project>
         <Contact></Contact>
       </div>
