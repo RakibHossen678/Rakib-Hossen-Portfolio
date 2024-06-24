@@ -1,5 +1,5 @@
 
-import Contact from "@/Components/Contact";
+import Contact from "@/components/Contact";
 const page = () => {
   return (
     <div>

@@ -1,5 +1,5 @@
-import About from "@/Components/About";
-import Skills from "@/Components/Skills";
+import About from "@/components/About";
+import Skills from "@/components/Skills";
 const page = () => {
   return (
     <div>

@@ -1,9 +1,9 @@
 export const dynamic = "force-dynamic";
-import About from "@/Components/About";
-import Banner from "@/Components/Banner";
-import Contact from "@/Components/Contact";
-import Project from "@/Components/Project";
-import Skills from "@/Components/Skills";
+import About from "@/components/About";
+import Banner from "@/components/Banner";
+import Contact from "@/components/Contact";
+import Project from "@/components/Project";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
