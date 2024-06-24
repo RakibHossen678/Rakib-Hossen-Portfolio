@@ -18,7 +18,7 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        carDoctorTheme: {
+        portfolioTheme: {
           primary: "#8750F7",
           secondary: "#2A1454",
           accent: "#37cdbe",
