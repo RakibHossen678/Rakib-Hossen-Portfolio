@@ -1,5 +1,12 @@
 export const getProjects = async () => {
-    const res = await fetch("http://localhost:3000/projects/api/get-all");
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/projects/api/get-all`
+    );
     const projects = res.json();
     return projects;
-  };
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};

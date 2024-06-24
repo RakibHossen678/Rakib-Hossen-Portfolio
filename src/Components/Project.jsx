@@ -22,7 +22,7 @@ const Project = () => {
       <div className="">
         <div className="mt-10">
           {loading ? (
-            <section class="bg-white dark:bg-gray-900">
+            <section className="bg-white dark:bg-gray-900">
               <div class="container px-6 py-10 mx-auto animate-pulse">
                 <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 lg:grid-cols-3">
                   <div class="w-full ">

@@ -3,11 +3,13 @@ import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-;
 const Banner = () => {
   return (
     <div className="lg:min-h-[calc(100vh-62px)] flex justify-between items-center lg:flex-row  flex-col-reverse ">
-      <div className="lg:w-[75%]">
+      <div
+        
+        className="lg:w-[75%] animate__fadeInLeft"
+      >
         <h1 className="text-4xl  text-primary py-4 font-semibold">
           I am Rakib Hossen
         </h1>
@@ -50,9 +52,7 @@ const Banner = () => {
             />
           </Link>
         </div>
-        <div>
-          
-        </div>
+        <div></div>
       </div>
       <div className="lg:w-[35%] my-10 lg:h-[200px] rotate-3 hover:rotate-0 transition-transform duration-400 ease-linear shadow-xl">
         <Image

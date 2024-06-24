@@ -4,7 +4,6 @@ import { MdOutlineFileDownload } from "react-icons/md";
 const About = () => {
   return (
     <div className="my-20">
-      
       <div className="mt-6 flex flex-col lg:flex-row items-center justify-between space-x-6">
         <div className=" lg:w-[35%] rounded-md">
           <Image
