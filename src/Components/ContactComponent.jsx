@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'; 
+import React from "react";
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
@@ -12,7 +12,7 @@ const Contact = () => {
     const email = e.target.email.value;
     const message = e.target.message.value;
     console.log({ name, subject, email, message });
-    const res = await fetch(`${NEXT_PUBLIC_BASE_URL}/api/contact`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
