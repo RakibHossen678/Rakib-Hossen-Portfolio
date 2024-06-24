@@ -1,3 +1,6 @@
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
@@ -7,8 +10,15 @@ const Banner = () => {
   return (
     <div className="lg:min-h-[calc(100vh-62px)] flex justify-between items-center lg:flex-row  flex-col-reverse ">
       <div
-        
-        className="lg:w-[75%] animate__fadeInLeft"
+        // data-aos="fade-right"
+        // data-aos-offset="200"
+        // data-aos-delay="50"
+        // data-aos-duration="1000"
+        // data-aos-easing="ease-in-out"
+        // data-aos-mirror="true"
+        // data-aos-once="false"
+        // data-aos-anchor-placement="top-center"
+        className="lg:w-[75%] "
       >
         <h1 className="text-4xl  text-primary py-4 font-semibold">
           I am Rakib Hossen

@@ -6,19 +6,19 @@ const ProjectsCard = ({ item }) => {
   const { title, description, image, link, github } = item;
   return (
     <div className="group">
-      <div class="max-w-lg h-[460px] overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+      <div className="max-w-lg h-[460px] overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Image
-          class=" bg-cover group-hover:scale-110  bg-center  h-64"
+          className=" bg-cover group-hover:scale-110  bg-center  h-64"
           src={image}
           height={356}
           width={400}
           alt={title}
         />
 
-        <div class="p-6 text-start flex flex-col flex-grow">
+        <div className="p-6 text-start flex flex-col flex-grow">
           <div className="flex-grow">
-            <span class="text-2xl font-bold text-secondary  ">{title}</span>
-            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            <span className="text-2xl font-bold text-secondary  ">{title}</span>
+            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               {description}
             </p>
           </div>

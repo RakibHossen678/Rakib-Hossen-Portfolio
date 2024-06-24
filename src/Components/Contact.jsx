@@ -1,4 +1,5 @@
 "use client";
+import React from 'react'; 
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
