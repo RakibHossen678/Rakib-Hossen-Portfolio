@@ -1,9 +1,8 @@
-
-
+export const dynamic = "force-dynamic";
 import HomePage from "@/components/HomePage";
 
-export const dynamic = "force-dynamic";
-
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 export default function Home() {
   // useEffect(() => {
@@ -11,7 +10,7 @@ export default function Home() {
   // }, []);
   return (
     <main className="min-h-[calc(100vh-114px)]">
-     <HomePage></HomePage>
+      <HomePage></HomePage>
     </main>
   );
 }

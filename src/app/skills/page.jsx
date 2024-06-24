@@ -1,6 +1,5 @@
 import React from 'react'; 
-import About from "@/components/About";
-import Skills from "@/components/Skills";
+import SkillsComponent from "@/components/SkillsComponent";
 const page = () => {
   return (
     <div>
@@ -19,7 +18,7 @@ const page = () => {
       </div>
 
       <div className="w-10/12 mx-auto">
-        <Skills></Skills>
+        <SkillsComponent></SkillsComponent>
       </div>
     </div>
   );

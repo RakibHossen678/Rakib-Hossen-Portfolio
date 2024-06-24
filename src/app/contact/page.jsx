@@ -1,5 +1,5 @@
-import React from 'react'; 
-import Contact from "@/components/Contact";
+import React from "react";
+import ContactComponent from "@/components/ContactComponent";
 const page = () => {
   return (
     <div>
@@ -18,7 +18,7 @@ const page = () => {
       </div>
 
       <div className="w-10/12 mx-auto">
-        <Contact></Contact>
+        <ContactComponent></ContactComponent>
       </div>
     </div>
   );

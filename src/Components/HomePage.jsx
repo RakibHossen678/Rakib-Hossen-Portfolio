@@ -1,17 +1,16 @@
 "use client";
 import React from "react";
-import About from "@/components/About";
-import Banner from "@/components/Banner";
-import Contact from "@/components/Contact";
-import Project from "@/components/Project";
-import Skills from "@/components/Skills";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
+import AboutComponent from "./AboutComponent.jsx";
+import BannerComponent from "./BannerComponent.jsx";
+import SkillsComponent from "./SkillsComponent.jsx";
+import ProjectComponent from "./ProjectComponent.jsx";
+import ContactComponent from "./ContactComponent.jsx";
+
 const HomePage = () => {
   return (
     <div>
       <div className="lg:w-9/12 w-11/12 mx-auto">
-        <Banner></Banner>
+        <BannerComponent></BannerComponent>
         <div className="my-20">
           <div
             // data-aos="fade-up"
@@ -28,7 +27,7 @@ const HomePage = () => {
               About <span className="text-primary"> Me</span>
             </h1>
           </div>
-          <About></About>
+          <AboutComponent></AboutComponent>
         </div>
         <div>
           <div
@@ -45,7 +44,7 @@ const HomePage = () => {
             <h1 className="text-4xl text-secondary  font-semibold">Skills</h1>
             <p className="text-gray-600 pt-1 font-medium">My Technical Level</p>
           </div>
-          <Skills></Skills>
+          <SkillsComponent></SkillsComponent>
         </div>
       </div>
       <div className="lg:w-10/12 mx-auto">
@@ -64,7 +63,7 @@ const HomePage = () => {
             Latest <span className="text-primary">Projects</span>
           </h1>
         </div>
-        <Project></Project>
+        <ProjectComponent></ProjectComponent>
         <div
           //  data-aos="fade-up"
           //  data-aos-offset="200"
@@ -81,7 +80,7 @@ const HomePage = () => {
           </h1>
           <p className="text-gray-600  font-medium pt-2">Get In Touch</p>
         </div>
-        <Contact></Contact>
+        <ContactComponent></ContactComponent>
       </div>
     </div>
   );

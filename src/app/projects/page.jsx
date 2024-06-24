@@ -1,5 +1,6 @@
-import React from 'react'; 
-import Project from "@/components/Project";
+import ProjectComponent from "@/components/ProjectComponent";
+import React from "react";
+
 
 const page = () => {
   return (
@@ -20,7 +21,7 @@ const page = () => {
       </div>
 
       <div className="w-10/12 mx-auto">
-        <Project></Project>
+        <ProjectComponent></ProjectComponent>
       </div>
     </div>
   );
