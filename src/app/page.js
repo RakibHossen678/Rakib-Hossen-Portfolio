@@ -1,5 +1,5 @@
 export const dynamic = "force-dynamic";
-import HomePage from "@/components/HomePage";
+import HomePage from "@/components/HomePage/HomePage";
 
 // import AOS from "aos";
 // import "aos/dist/aos.css";

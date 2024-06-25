@@ -1,6 +1,6 @@
 "use client";
 import { getProjects } from "@/app/services/getProjects";
-import ProjectsCard from "@/components/ProjectsCard";
+import ProjectsCard from "@/components/HomePage/ProjectsCard";
 import React, { useEffect, useState } from "react";
 
 
