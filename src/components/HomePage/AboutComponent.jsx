@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
-import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="my-20">

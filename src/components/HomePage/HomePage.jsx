@@ -13,14 +13,9 @@ const HomePage = () => {
         <BannerComponent></BannerComponent>
         <div className="my-20">
           <div
-            // data-aos="fade-up"
-            // data-aos-offset="200"
-            // data-aos-delay="50"
-            // data-aos-duration="1000"
-            // data-aos-easing="ease-in-out"
-            // data-aos-mirror="true"
-            // data-aos-once="false"
-            // data-aos-anchor-placement="top-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
             className="text-center"
           >
             <h1 className="text-4xl text-secondary  py-5 font-semibold">
@@ -31,14 +26,9 @@ const HomePage = () => {
         </div>
         <div>
           <div
-            // data-aos="fade-up"
-            // data-aos-offset="200"
-            // data-aos-delay="50"
-            // data-aos-duration="1000"
-            // data-aos-easing="ease-in-out"
-            // data-aos-mirror="true"
-            // data-aos-once="false"
-            // data-aos-anchor-placement="top-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
             className="text-center py-5 "
           >
             <h1 className="text-4xl text-secondary  font-semibold">Skills</h1>
@@ -49,14 +39,9 @@ const HomePage = () => {
       </div>
       <div className="lg:w-10/12 mx-auto">
         <div
-          // data-aos="fade-up"
-          // data-aos-offset="200"
-          // data-aos-delay="50"
-          // data-aos-duration="1000"
-          // data-aos-easing="ease-in-out"
-          // data-aos-mirror="true"
-          // data-aos-once="false"
-          // data-aos-anchor-placement="top-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
           className="text-center"
         >
           <h1 className="text-4xl text-secondary  py-5 font-semibold">
@@ -65,14 +50,9 @@ const HomePage = () => {
         </div>
         <ProjectComponent></ProjectComponent>
         <div
-          //  data-aos="fade-up"
-          //  data-aos-offset="200"
-          //  data-aos-delay="50"
-          //  data-aos-duration="1000"
-          //  data-aos-easing="ease-in-out"
-          //  data-aos-mirror="true"
-          //  data-aos-once="false"
-          //  data-aos-anchor-placement="top-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
           className="text-center py-5 "
         >
           <h1 className="text-4xl text-secondary  font-semibold">
