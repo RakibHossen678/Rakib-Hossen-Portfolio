@@ -29,7 +29,7 @@ const Contact = () => {
       className="my-20
     "
     >
-      <div className="flex items-center gap-36 mt-6">
+      <div className="flex flex-col lg:flex-row items-center lg:gap-36 gap-4 mt-6">
         <div className="p-4 py-6 rounded-lg bg-gray-50 dark:bg-gray-800 md:p-8">
           <form onSubmit={handleEmail}>
             <div className="-mx-2 md:items-center md:flex">

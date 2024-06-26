@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div>
       <div
-        className="hero min-h-[300px]"
+        className="hero lg:min-h-[300px]"
         style={{
           backgroundImage: "url('/cover.png')",
         }}
@@ -16,7 +16,7 @@ const page = () => {
           <p className="text-gray-200  font-medium pt-2">Get In Touch</p>
         </div>
       </div>
-      <div className="w-9/12 mx-auto">
+      <div className="lg:w-9/12 mx-auto">
         <About></About>
       </div>
     </div>

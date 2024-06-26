@@ -3,21 +3,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook } from "react-icons/fa";
+import { FaDrupal, FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 const Banner = () => {
   return (
     <div className="lg:min-h-[calc(100vh-62px)] flex justify-between items-center lg:flex-row  flex-col-reverse ">
-      <div
-        // data-aos="fade-right"
-        // data-aos-offset="200"
-        // data-aos-delay="50"
-        // data-aos-duration="1000"
-        // data-aos-easing="ease-in-out"
-        // data-aos-mirror="true"
-        // data-aos-once="false"
-        // data-aos-anchor-placement="top-center"
+      <motion.div
+        initial={{ x: -800 }}
+        animate={{ x: 0 }}
+        transition={{
+          duration: 3,
+          delay: 0.2,
+        }}
         className="lg:w-[75%] "
       >
         <h1 className="text-4xl  text-primary py-4 font-semibold">
@@ -32,38 +30,68 @@ const Banner = () => {
           which makes me a valuable asset to any project.
         </p>
         <div className="flex space-x-4 items-center my-4 hover:text-secondary">
-          <Link
-            className=""
-            href="https://www.linkedin.com/in/hossen-rakib/"
-            target="_blank"
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            transition={{
+              layout: {
+                duration: 1,
+                type: "spring",
+              },
+            }}
           >
-            <FaLinkedin
-              className="text-primary rounded-md hover:text-secondary"
-              size={30}
-            />
-          </Link>
-          <Link
-            className=""
-            href="https://github.com/RakibHossen678"
-            target="_blank"
+            <Link
+              className=""
+              href="https://www.linkedin.com/in/hossen-rakib/"
+              target="_blank"
+            >
+              <FaLinkedin
+                className="text-primary rounded-md hover:text-secondary"
+                size={30}
+              />
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            transition={{
+              layout: {
+                duration: 1,
+                type: "spring",
+              },
+            }}
           >
-            <FaGithub
-              className="text-primary rounded-md hover:text-secondary"
-              size={30}
-            />
-          </Link>
-          <Link
-            href="https://www.facebook.com/profile.php?id=100056015882794"
-            target="_blank"
+            <Link
+              className=""
+              href="https://github.com/RakibHossen678"
+              target="_blank"
+            >
+              <FaGithub
+                className="text-primary rounded-md hover:text-secondary"
+                size={30}
+              />
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            transition={{
+              layout: {
+                duration: 1,
+                type: "spring",
+              },
+            }}
           >
-            <FaFacebook
-              className="text-primary rounded-md hover:text-secondary"
-              size={30}
-            />
-          </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=100056015882794"
+              target="_blank"
+            >
+              <FaFacebook
+                className="text-primary rounded-md hover:text-secondary"
+                size={30}
+              />
+            </Link>
+          </motion.div>
         </div>
         <div></div>
-      </div>
+      </motion.div>
       <div className="lg:w-[35%] my-10 lg:h-[200px] rotate-3 hover:rotate-0 transition-transform duration-400 ease-linear shadow-xl">
         <Image
           alt="profile"
