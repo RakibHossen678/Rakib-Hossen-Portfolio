@@ -5,10 +5,10 @@ import React from "react";
 const ProjectsCard = ({ item }) => {
   const { title, description, image, link, github } = item;
   return (
-    <div className="group">
-      <div className="max-w-lg h-[460px] overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div className="lg:group">
+      <div className="lg:max-w-lg lg:h-[460px] overflow-hidden bg-white rounded-lg shadow-md ">
         <Image
-          className=" bg-cover group-hover:scale-110  bg-center  h-64"
+          className=" bg-cover lg:group-hover:scale-110  bg-center  lg:h-64"
           src={image}
           height={356}
           width={400}
@@ -18,7 +18,7 @@ const ProjectsCard = ({ item }) => {
         <div className="p-6 text-start flex flex-col flex-grow">
           <div className="flex-grow">
             <span className="text-2xl font-bold text-secondary  ">{title}</span>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            <p className="mt-2 text-sm text-gray-600 ">
               {description}
             </p>
           </div>

@@ -2,11 +2,20 @@
 import Image from "next/image";
 import React from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
+import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="my-20">
       <div className="mt-6 flex flex-col lg:flex-row items-center justify-between space-x-6">
-        <div className=" lg:w-[35%] rounded-md">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.1,
+          }}
+          className=" lg:w-[35%] rounded-md"
+        >
           <Image
             className="rounded-lg"
             quality={100}
@@ -16,7 +25,7 @@ const About = () => {
             alt="about"
             src="/about.png"
           />
-        </div>
+        </motion.div>
         <div className="lg:w-[60%]">
           <h1 className="text-lg font-medium text-secondary py-2">
             I am Rakib Hossen{" "}
