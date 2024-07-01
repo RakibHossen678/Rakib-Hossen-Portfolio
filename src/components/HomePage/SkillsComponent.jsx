@@ -4,88 +4,47 @@ import React from "react";
 const Skills = () => {
   return (
     <div className="my-20">
-      
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 my-10">
-        <div className="flex  items-center space-x-4">
+      <div className="grid lg:grid-cols-5  grid-cols-1 gap-16  my-10">
+        <div className=" border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20 ">
           <Image alt="html" width={62} height={62} src="/html.png" />
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={80}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">HTML</h1>
         </div>
-        <div className="flex  items-center space-x-4">
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
           <Image alt="html" width={62} height={62} src="/css.png" />
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={80}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">CSS</h1>
         </div>
-        <div className="flex  items-center space-x-4">
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
           <Image alt="html" width={62} height={62} src="/tailwind.png" />
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={80}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">Tailwind CSS</h1>
         </div>
-        <div className="flex  items-center space-x-4">
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
           <Image alt="html" width={62} height={62} src="/javascript.png" />
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={70}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">JavaScript</h1>
         </div>
-        <div className="flex  items-center space-x-4">
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
           <Image alt="html" width={62} height={62} src="/react.png" />
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={70}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">React JS</h1>
         </div>
-        <div className="flex  items-center space-x-4">
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
           <Image alt="html" width={62} height={62} src="/nextjs.png" />
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={50}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">Next JS</h1>
         </div>
-        <div className="flex  items-center space-x-4">
-        <Image alt="html" width={62} height={62} src='/expressjs.png'/>
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={40}
-            max="100"
-          ></progress>
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
+          <Image alt="html" width={62} height={62} src="/expressjs.png" />
+          <h1 className="text-lg font-medium ">Express JS</h1>
         </div>
-        <div className="flex  items-center space-x-4">
-        <Image alt="html" width={62} height={62} src='/mongodb.png'/>
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
+          <Image alt="html" width={62} height={62} src="/mongodb.png" />
 
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={40}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">MongoDB</h1>
         </div>
-        <div className="flex  items-center space-x-4">
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
           <Image alt="html" width={62} height={62} src="/firebase.png" />
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={40}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">Firebase</h1>
         </div>
-        <div className="flex  items-center space-x-4">
+        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
           <Image alt="html" width={62} height={62} src="/github.png" />
-          <progress
-            className="progress progress-primary w-72 h-3"
-            value={50}
-            max="100"
-          ></progress>
+          <h1 className="text-lg font-medium ">Github</h1>
         </div>
       </div>
     </div>
