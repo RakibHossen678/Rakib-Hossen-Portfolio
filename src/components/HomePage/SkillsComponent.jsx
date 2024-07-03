@@ -4,7 +4,7 @@ import React from "react";
 const Skills = () => {
   return (
     <div className="my-20">
-      <div className="grid lg:grid-cols-5  grid-cols-1 gap-16  my-10">
+      <div className="grid lg:grid-cols-5  grid-cols-2 gap-16  my-10">
         <div className=" border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20 ">
           <Image alt="html" width={62} height={62} src="/html.png" />
           <h1 className="text-lg font-medium ">HTML</h1>
