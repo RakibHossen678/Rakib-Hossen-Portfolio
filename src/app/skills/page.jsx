@@ -1,5 +1,4 @@
-import React from "react";
-// import SkillsComponent from "@/components/HomePage/SkillsComponent";
+import SkillComponent from "@/components/HomePage/SkillComponent";
 const SkillPage = () => {
   return (
     <div>
@@ -18,7 +17,7 @@ const SkillPage = () => {
       </div>
 
       <div className="w-8/12 mx-auto">
-        {/* <SkillsComponent></SkillsComponent> */}
+        <SkillComponent/>
       </div>
     </div>
   );
