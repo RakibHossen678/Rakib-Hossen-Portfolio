@@ -13,7 +13,7 @@ const skills = [
   { src: "/mongodb.png", alt: "MongoDB", label: "MongoDB" },
   { src: "/firebase.png", alt: "Firebase", label: "Firebase" },
   { src: "/github.png", alt: "Github", label: "Github" },
-  { src: "/bootstrap.jpeg", alt: "Bootstrap", label: "Bootstrap" },
+  { src: "/bootstrap.png", alt: "Bootstrap", label: "Bootstrap" },
 ];
 
 const Skills = () => {
