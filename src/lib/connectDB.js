@@ -12,7 +12,7 @@ export const connectDB = async () => {
         deprecationErrors: true,
       },
     });
-    await client.connect()
+    await client.connect();
     db = client.db("portfolio-db");
     return db;
   } catch (error) {

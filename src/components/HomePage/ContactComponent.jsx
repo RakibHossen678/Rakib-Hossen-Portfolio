@@ -4,6 +4,7 @@ import { FaPhoneVolume } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import toast from "react-hot-toast";
+
 const Contact = () => {
   const handleEmail = async (e) => {
     e.preventDefault();
@@ -20,10 +21,11 @@ const Contact = () => {
       body: JSON.stringify({ name, subject, email, message }),
     });
     if (res.ok) {
-      console.log("message send");
-      toast.success("Email send successfully");
+      console.log("message sent");
+      toast.success("Email sent successfully");
     }
   };
+
   return (
     <div className="pb-20 px-4 lg:px-12">
       <div className="flex flex-col lg:flex-row items-center lg:gap-36 gap-4 mt-6">
@@ -41,7 +43,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Enter Your Name"
                   name="name"
-                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
                 />
               </div>
 
@@ -53,7 +55,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Enter Your Subject"
                   name="subject"
-                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
                 />
               </div>
             </div>
@@ -66,7 +68,7 @@ const Contact = () => {
                 type="email"
                 placeholder="Enter Your Email"
                 name="email"
-                className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-primary dark:focus:border-blue-400 focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-primary dark:focus:border-blue-400 focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
               />
             </div>
 
@@ -75,13 +77,13 @@ const Contact = () => {
                 Message
               </label>
               <textarea
-                className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
                 placeholder="Enter Message"
                 name="message"
               ></textarea>
             </div>
 
-            <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-lg focus:ring-opacity-50">
+            <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-transform duration-300 transform bg-primary rounded-lg focus:ring-opacity-50 hover:scale-105 hover:bg-primary-dark">
               Send message
             </button>
           </form>
@@ -101,7 +103,7 @@ const Contact = () => {
           >
             <div>
               <FaPhoneVolume
-                className="bg-secondary text-white rounded-full p-1"
+                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
                 size={40}
               />
             </div>
@@ -119,7 +121,7 @@ const Contact = () => {
           >
             <div>
               <MdOutlineMailOutline
-                className="bg-secondary text-white rounded-full p-1"
+                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
                 size={40}
               />
             </div>
@@ -137,7 +139,7 @@ const Contact = () => {
           >
             <div>
               <IoLocationSharp
-                className="bg-secondary text-white rounded-full p-1"
+                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
                 size={40}
               />
             </div>

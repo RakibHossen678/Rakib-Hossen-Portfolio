@@ -1,0 +1,66 @@
+[
+  {
+    "_id": "6676e035c6bb87053db0d3f4",
+    "title": "ChatSphere",
+    "description": "An online forum platform with user authentication, responsive design…",
+    "link": "https://chatspher.web.app/",
+    "github": "https://github.com/RakibHossen678/chatSpre-Client",
+    "image": "https://i.ibb.co/7KbGHCm/chat-Spere.png"
+  },
+  {
+    "_id": "6676e035c6bb87053db0d3f5",
+    "title": "CareKitchen",
+    "description": "An online food sharing platform with user authentication, responsive …",
+    "link": "https://assignment11-736a2.web.app/",
+    "github": "https://github.com/RakibHossen678/CareKitchen-Client",
+    "image": "https://i.ibb.co/DRDM5q7/Care-Kitchen.png"
+  },
+  {
+    "_id": "6676e035c6bb87053db0d3f6",
+    "title": "CreativeCanvasHub",
+    "description": "An online platform for sharing and managing art and craft items.This p…",
+    "link": "https://assignment10-a34c2.web.app/",
+    "github": "https://github.com/RakibHossen678/CreativeCanvasHub-Client/blob/main/R…",
+    "image": "https://i.ibb.co/2NmFbsh/creative-Canvas-Hub.png"
+  },
+  {
+    "_id": "6676e035c6bb87053db0d3f7",
+    "title": "HavenlyHomes",
+    "description": "An online platform for discovering and managing residential properties…",
+    "link": "https://assignment9-b30a7.web.app/",
+    "github": "https://github.com/RakibHossen678/HavenlyHomes",
+    "image": "https://i.ibb.co/QC4LG4z/havenly-Home.png"
+  },
+  {
+    "_id": "6676e035c6bb87053db0d3f8",
+    "title": "BookRiot",
+    "description": "A book selling platform for to explore, manage, and interact with a wi…",
+    "link": "https://ubiquitous-puffpuff-8b1b82.netlify.app/",
+    "github": "https://github.com/RakibHossen678/BookRiot",
+    "image": "https://i.ibb.co/frzGtM5/BookRiot.png"
+  },
+  {
+    "_id": "6676e035c6bb87053db0d3f9",
+    "title": "Recipe Calories",
+    "description": "An online platform where users can discover new recipes.The platform a…",
+    "link": "https://monumental-smakager-9dc451.netlify.app/",
+    "github": "https://github.com/RakibHossen678/Recipe-Calories",
+    "image": "https://i.ibb.co/7KjGNTp/Recipe-Calories.png"
+  },
+  {
+    "_id": "6676e035c6bb87053db0d3fa",
+    "title": "NewsSphere",
+    "description": "An online forum platform where users can read and engage with blog pos…",
+    "link": "https://65e576abb57cf0286506b7cc--teal-croquembouche-11cca7.netlify.ap…",
+    "github": "https://github.com/RakibHossen678/NewsSphere",
+    "image": "https://i.ibb.co/MG2DYgV/News-Sphere.png"
+  },
+  {
+    "_id": "6676e035c6bb87053db0d3fb",
+    "title": "Greenline-Ticket",
+    "description": "An online platform for booking bus tickets.This platform allows user t…",
+    "link": "https://rakibhossen678.github.io/Greenline-Ticket/",
+    "github": "https://github.com/RakibHossen678/Greenline-Ticket",
+    "image": "https://i.ibb.co/vXmwVHB/Greenline-Ticket.png"
+  }
+]
