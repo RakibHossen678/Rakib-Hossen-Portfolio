@@ -78,11 +78,11 @@ const About = () => {
             for efficient server-side applications. To enhance my designs, I use
             UI component libraries like Shadcn UI, Daisy UI, and Bootstrap,
             ensuring a visually appealing and modern user experience.
-            
-            I'm excited to contribute to your projects with clean, maintainable
-            code and a strong problem-solving mindset. Whether you're looking to
-            create dynamic web applications or improve an existing website, I'm
-            ready to bring my skills and expertise to help your project succeed.
+            <br></br>I am excited to contribute to your projects with clean,
+            maintainable code and a strong problem-solving mindset. Whether you
+            are looking to create dynamic web applications or improve an
+            existing website, I am ready to bring my skills and expertise to
+            help your project succeed.
           </motion.p>
 
           <motion.div
