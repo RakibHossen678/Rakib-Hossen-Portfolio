@@ -1,19 +1,19 @@
-import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import Image from 'next/image';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const skills = [
-  { src: "/html.png", alt: "HTML", label: "HTML" },
-  { src: "/css.png", alt: "CSS", label: "CSS" },
-  { src: "/tailwind.png", alt: "Tailwind CSS", label: "Tailwind CSS" },
-  { src: "/javascript.png", alt: "JavaScript", label: "JavaScript" },
-  { src: "/react.png", alt: "React JS", label: "React JS" },
-  { src: "/nextjs.png", alt: "Next JS", label: "Next JS" },
-  { src: "/expressjs.png", alt: "Express JS", label: "Express JS" },
-  { src: "/mongodb.png", alt: "MongoDB", label: "MongoDB" },
-  { src: "/firebase.png", alt: "Firebase", label: "Firebase" },
-  { src: "/github.png", alt: "Github", label: "Github" },
-  { src: "/bootstrap.png", alt: "Bootstrap", label: "Bootstrap" },
+  { src: '/html.png', alt: 'HTML', label: 'HTML' },
+  { src: '/css.png', alt: 'CSS', label: 'CSS' },
+  { src: '/tailwind.png', alt: 'Tailwind CSS', label: 'Tailwind CSS' },
+  { src: '/javascript.png', alt: 'JavaScript', label: 'JavaScript' },
+  { src: '/react.png', alt: 'React JS', label: 'React JS' },
+  { src: '/nextjs.png', alt: 'Next JS', label: 'Next JS' },
+  { src: '/expressjs.png', alt: 'Express JS', label: 'Express JS' },
+  { src: '/mongodb.png', alt: 'MongoDB', label: 'MongoDB' },
+  { src: '/firebase.png', alt: 'Firebase', label: 'Firebase' },
+  { src: '/github.png', alt: 'Github', label: 'Github' },
+  { src: '/bootstrap.png', alt: 'Bootstrap', label: 'Bootstrap' },
 ];
 
 const Skills = () => {

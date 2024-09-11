@@ -24,21 +24,23 @@ const Project = () => {
         {loading ? (
           <section className="bg-white">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {Array(6).fill(0).map((_, idx) => (
-                <motion.div
-                  key={idx}
-                  className="w-full animate-pulse"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                >
-                  <div className="w-full h-64 bg-gray-300 rounded-lg"></div>
-                  <div className="mt-4 space-y-2">
-                    <div className="w-3/4 h-6 bg-gray-200 rounded-lg"></div>
-                    <div className="w-1/2 h-4 bg-gray-200 rounded-lg"></div>
-                  </div>
-                </motion.div>
-              ))}
+              {Array(6)
+                ?.fill(0)
+                ?.map((_, idx) => (
+                  <motion.div
+                    key={idx}
+                    className="w-full animate-pulse"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  >
+                    <div className="w-full h-64 bg-gray-300 rounded-lg"></div>
+                    <div className="mt-4 space-y-2">
+                      <div className="w-3/4 h-6 bg-gray-200 rounded-lg"></div>
+                      <div className="w-1/2 h-4 bg-gray-200 rounded-lg"></div>
+                    </div>
+                  </motion.div>
+                ))}
             </div>
           </section>
         ) : (
@@ -48,7 +50,7 @@ const Project = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            {projects.slice(0, 6).map((item, idx) => (
+            {projects?.slice(0, 6).map((item, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
