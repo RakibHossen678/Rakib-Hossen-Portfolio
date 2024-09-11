@@ -8,39 +8,56 @@ import ContactComponent from "./ContactComponent.jsx";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="bg-gray-100 min-h-screen">
       <div className="lg:w-9/12 w-11/12 mx-auto">
-        <BannerComponent></BannerComponent>
+        {/* Banner Section */}
+        <BannerComponent />
+
+        {/* About Section */}
         <div className="my-20">
-          <div className="text-center">
-            <h1 className="text-4xl text-secondary  py-5 font-semibold">
-              About <span className="text-primary"> Me</span>
+          <div className="text-center mb-12">
+            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
+              About <span className="text-primary">Me</span>
             </h1>
           </div>
-          <AboutComponent></AboutComponent>
+          <AboutComponent />
         </div>
-        <div>
-          <div className="text-center py-5 ">
-            <h1 className="text-4xl text-secondary  font-semibold">Skills</h1>
-            <p className="text-gray-600 pt-1 font-medium">My Technical Level</p>
+
+        {/* Skills Section */}
+        <div className="my-20">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
+              Skills
+            </h1>
+            <p className="text-gray-600 text-lg font-medium mt-2">
+              My Technical Level
+            </p>
           </div>
-          <SkillsComponent></SkillsComponent>
+          <SkillsComponent />
         </div>
-      </div>
-      <div className="lg:w-10/12 mx-auto">
-        <div className="text-center">
-          <h1 className="text-4xl text-secondary  py-5 font-semibold">
-            Latest <span className="text-primary">Projects</span>
-          </h1>
+
+        {/* Projects Section */}
+        <div className="my-20">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
+              Latest <span className="text-primary">Projects</span>
+            </h1>
+          </div>
+          <ProjectComponent />
         </div>
-        <ProjectComponent></ProjectComponent>
-        <div className="text-center py-5 ">
-          <h1 className="text-4xl text-secondary  font-semibold">
-            Contact <span className="text-primary">Me</span>
-          </h1>
-          <p className="text-gray-600  font-medium pt-2">Get In Touch</p>
+
+        {/* Contact Section */}
+        <div className="my-20">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
+              Contact <span className="text-primary">Me</span>
+            </h1>
+            <p className="text-gray-600 text-lg font-medium mt-2">
+              Get In Touch
+            </p>
+          </div>
+          <ContactComponent />
         </div>
-        <ContactComponent></ContactComponent>
       </div>
     </div>
   );

@@ -1,51 +1,43 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+
+const skills = [
+  { src: "/html.png", alt: "HTML", label: "HTML" },
+  { src: "/css.png", alt: "CSS", label: "CSS" },
+  { src: "/tailwind.png", alt: "Tailwind CSS", label: "Tailwind CSS" },
+  { src: "/javascript.png", alt: "JavaScript", label: "JavaScript" },
+  { src: "/react.png", alt: "React JS", label: "React JS" },
+  { src: "/nextjs.png", alt: "Next JS", label: "Next JS" },
+  { src: "/expressjs.png", alt: "Express JS", label: "Express JS" },
+  { src: "/mongodb.png", alt: "MongoDB", label: "MongoDB" },
+  { src: "/firebase.png", alt: "Firebase", label: "Firebase" },
+  { src: "/github.png", alt: "Github", label: "Github" },
+  { src: "/bootstrap.jpeg", alt: "Bootstrap", label: "Bootstrap" },
+];
 
 const Skills = () => {
   return (
-    <div className="my-20">
-      <div className="grid lg:grid-cols-5  grid-cols-2 gap-16  my-10">
-        <div className=" border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20 ">
-          <Image alt="html" width={62} height={62} src="/html.png" />
-          <h1 className="text-lg font-medium ">HTML</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/css.png" />
-          <h1 className="text-lg font-medium ">CSS</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/tailwind.png" />
-          <h1 className="text-lg font-medium ">Tailwind CSS</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/javascript.png" />
-          <h1 className="text-lg font-medium ">JavaScript</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/react.png" />
-          <h1 className="text-lg font-medium ">React JS</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/nextjs.png" />
-          <h1 className="text-lg font-medium ">Next JS</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/expressjs.png" />
-          <h1 className="text-lg font-medium ">Express JS</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/mongodb.png" />
-
-          <h1 className="text-lg font-medium ">MongoDB</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/firebase.png" />
-          <h1 className="text-lg font-medium ">Firebase</h1>
-        </div>
-        <div className="border-2 flex justify-center flex-col items-center py-4 rounded-md hover:scale-105 hover:bg-primary/20">
-          <Image alt="html" width={62} height={62} src="/github.png" />
-          <h1 className="text-lg font-medium ">Github</h1>
-        </div>
+    <div className="container mx-auto p-4 lg:p-0">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8">
+        {skills.map(({ src, alt, label }, idx) => (
+          <motion.div
+            key={idx}
+            className="flex flex-col items-center justify-center p-6 rounded-lg border-2 border-gray-200 bg-white shadow-md hover:shadow-xl hover:bg-primary/10 transition-all duration-300 ease-in-out"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
+          >
+            <Image
+              alt={alt}
+              width={62}
+              height={62}
+              src={src}
+              className="rounded-full"
+            />
+            <h1 className="mt-4 text-lg font-semibold text-secondary">{label}</h1>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
