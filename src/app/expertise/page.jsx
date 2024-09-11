@@ -1,5 +1,7 @@
-import SkillComponent from "@/components/HomePage/SkillComponent";
-const SkillPage = () => {
+import TechnicalComponent from "@/components/HomePage/TechnicalComponent";
+
+
+const ExpertisePage = () => {
   return (
     <div>
       <div
@@ -17,10 +19,10 @@ const SkillPage = () => {
       </div>
 
       <div className="w-8/12 mx-auto">
-        <SkillComponent/>
+        <TechnicalComponent />
       </div>
     </div>
   );
 };
 
-export default SkillPage;
+export default ExpertisePage;

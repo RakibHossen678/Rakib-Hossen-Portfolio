@@ -1,7 +1,8 @@
+'use client';
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const SkillComponent = () => {
+const TechnicalComponent = () => {
   const skills = [
     { src: "/html.png", alt: "HTML", label: "HTML" },
     { src: "/css.png", alt: "CSS", label: "CSS" },
@@ -17,8 +18,7 @@ const SkillComponent = () => {
   ];
 
   return (
-    <section className="py-16 px-4 text-center  bg-gray-100">
-      
+    <section className="py-16 px-4 text-center  ">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
         {skills.map((skill) => (
           <motion.div
@@ -38,4 +38,4 @@ const SkillComponent = () => {
   );
 };
 
-export default SkillComponent;
+export default TechnicalComponent;

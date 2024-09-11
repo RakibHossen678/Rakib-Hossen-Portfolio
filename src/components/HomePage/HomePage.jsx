@@ -4,7 +4,7 @@ import AboutComponent from "./AboutComponent.jsx";
 import BannerComponent from "./BannerComponent.jsx";
 import ProjectComponent from "./ProjectComponent.jsx";
 import ContactComponent from "./ContactComponent.jsx";
-import SkillComponent from "./SkillComponent.jsx";
+import TechnicalComponent from "./TechnicalComponent.jsx";
 
 const HomePage = () => {
   return (
@@ -31,7 +31,7 @@ const HomePage = () => {
               My Technical Level
             </p>
           </div>
-          <SkillComponent />
+          <TechnicalComponent/>
         </div>
 
         {/* Projects Section */}
