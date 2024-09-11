@@ -35,7 +35,9 @@ const Skills = () => {
               src={src}
               className="rounded-full"
             />
-            <h1 className="mt-4 text-lg font-semibold text-secondary">{label}</h1>
+            <h1 className="mt-4 text-lg font-semibold text-secondary">
+              {label}
+            </h1>
           </motion.div>
         ))}
       </div>
