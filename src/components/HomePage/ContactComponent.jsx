@@ -20,7 +20,7 @@ const Contact = () => {
       },
       body: JSON.stringify({ name, subject, email, message }),
     });
-    if (res.ok) {
+    if (res) {
       console.log("message sent");
       toast.success("Email sent successfully");
     }
