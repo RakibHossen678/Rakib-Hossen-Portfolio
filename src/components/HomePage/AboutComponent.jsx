@@ -77,8 +77,14 @@ const About = () => {
             React.js, and Next.js, with MongoDB for the back end and Express.js
             for efficient server-side applications. To enhance my designs, I use
             UI component libraries like Shadcn UI, Daisy UI, and Bootstrap,
-            ensuring a visually appealing and modern user experience. <br />{" "}
-            <br />
+            ensuring a visually appealing and modern user experience.{" "}
+            <div>
+              &apos;Естоr&apos; can be escaped with &apos;, &lsquo;, &#39;,
+              &rsquo;.
+              <br />
+              &apos;Естоr&apos; can be escaped with &apos;, &lsquo;, &#39;,
+              &rsquo;.
+            </div>
             I'm excited to contribute to your projects with clean, maintainable
             code and a strong problem-solving mindset. Whether you're looking to
             create dynamic web applications or improve an existing website, I'm
