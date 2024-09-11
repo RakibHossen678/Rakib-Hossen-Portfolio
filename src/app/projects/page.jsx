@@ -20,7 +20,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="w-10/12 mx-auto">
+      <div className="lg:w-10/12 w-full mx-auto">
         <Project></Project>
       </div>
     </div>

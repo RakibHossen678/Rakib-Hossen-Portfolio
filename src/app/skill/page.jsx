@@ -20,7 +20,7 @@ const SkillPage = () => {
         </div>
       </div>
 
-      <div className="w-8/12 mx-auto">
+      <div className="lg:w-8/12 w-full mx-auto">
         <TechnicalComponent />
       </div>
     </div>
