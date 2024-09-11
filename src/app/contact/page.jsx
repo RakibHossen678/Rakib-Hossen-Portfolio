@@ -14,7 +14,9 @@ const page = () => {
           <h1 className="text-4xl text-white  font-semibold">
             Contact <span className="text-primary">Me</span>
           </h1>
-          <p className="text-gray-200  font-medium pt-2">Get In Touch</p>
+          <p className="text-gray-200  font-medium pt-2">
+            Get in Touch—Let us Discuss How We Can Work Together
+          </p>
         </div>
       </div>
 

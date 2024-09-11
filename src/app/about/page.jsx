@@ -14,7 +14,7 @@ const AboutPage = () => {
           <h1 className="text-4xl text-white font-semibold">
             About <span className="text-primary">Me</span>
           </h1>
-          <p className="text-gray-200 font-medium pt-2">Get In Touch</p>
+          <p className="text-gray-200 font-medium pt-2">Dedicated to Excellence in Every Project</p>
         </div>
       </div>
       <div className="lg:w-9/12 mx-auto">

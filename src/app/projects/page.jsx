@@ -14,7 +14,9 @@ const page = () => {
             <h1 className="text-4xl text-white  font-semibold">
               Latest <span className="text-primary">Project</span>
             </h1>
-           
+            <p className="text-white pt-1 font-medium">
+              A Showcase of My Most Impactful Projects
+            </p>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import TechnicalComponent from "@/components/HomePage/TechnicalComponent";
+import React from "react";
 
-
-const ExpertisePage = () => {
+const SkillPage = () => {
   return (
     <div>
       <div
@@ -11,9 +11,11 @@ const ExpertisePage = () => {
         }}
       >
         <div className="hero-content text-neutral-content text-center">
-          <div className="text-center py-5 ">
-            <h1 className="text-4xl text-primary  font--semibold">Skills</h1>
-            <p className="text-white pt-1 font-medium">My Technical Level</p>
+          <div className="text-center py-5">
+            <h1 className="text-4xl text-primary font-semibold">Skills</h1>
+            <p className="text-white pt-1 font-medium">
+              The Skills That Turn Ideas Into Reality
+            </p>
           </div>
         </div>
       </div>
@@ -25,4 +27,4 @@ const ExpertisePage = () => {
   );
 };
 
-export default ExpertisePage;
+export default SkillPage;
