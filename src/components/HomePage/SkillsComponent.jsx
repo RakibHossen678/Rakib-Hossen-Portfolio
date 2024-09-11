@@ -16,7 +16,7 @@ const skills = [
   { src: '/bootstrap.png', alt: 'Bootstrap', label: 'Bootstrap' },
 ];
 
-const Skills = () => {
+const SkillsComponent = () => {
   return (
     <div className="container mx-auto p-4 lg:p-0">
       <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8">
@@ -45,4 +45,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsComponent;
