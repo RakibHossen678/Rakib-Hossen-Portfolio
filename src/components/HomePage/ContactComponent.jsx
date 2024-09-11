@@ -26,11 +26,11 @@ const Contact = () => {
   };
   return (
     <div
-      className="my-20
+      className=" pb-20
     "
     >
       <div className="flex flex-col lg:flex-row items-center lg:gap-36 gap-4 mt-6">
-        <div className="p-4 py-6 rounded-lg bg-gray-50  md:p-8">
+        <div className="p-4 py-6 w-full rounded-lg bg-gray-50  md:p-8">
           <form onSubmit={handleEmail}>
             <div className="-mx-2 md:items-center md:flex">
               <div className="flex-1 px-2">
@@ -86,7 +86,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <div className="space-y-6">
+        <div className="space-y-6 w-full">
           <div className="flex items-center space-x-5">
             <div>
               <FaPhoneVolume

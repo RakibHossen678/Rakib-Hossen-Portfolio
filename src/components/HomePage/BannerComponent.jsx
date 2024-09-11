@@ -40,7 +40,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center py-12 px-4 lg:px-12 bg-gray-100">
+    <div className="min-h-screen flex justify-center items-center py-12 px-4 lg:px-12 ">
       <motion.div
         className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between w-full max-w-screen-xl"
         variants={containerVariants}

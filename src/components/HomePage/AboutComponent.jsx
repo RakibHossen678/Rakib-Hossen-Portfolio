@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="my-20 px-4 lg:px-12">
+    <div className="my-20 px-4 lg:px-12 ">
+      
       <div className="flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0 lg:space-x-10">
         <motion.div
           initial={{ opacity: 0, x: -100, scale: 0.8 }}
@@ -78,8 +79,7 @@ const About = () => {
             for efficient server-side applications. To enhance my designs, I use
             UI component libraries like Shadcn UI, Daisy UI, and Bootstrap,
             ensuring a visually appealing and modern user experience.
-            <br/>
-            I am excited to contribute to your projects with clean,
+            <br />I am excited to contribute to your projects with clean,
             maintainable code and a strong problem-solving mindset. Whether you
             are looking to create dynamic web applications or improve an
             existing website, I am ready to bring my skills and expertise to

@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="bg-primary/20 fixed top-0 left-0 right-0 z-10 shadow-md">
+    <div className="bg-primary/20 fixed top-0 left-0 right-0 z-50 shadow-md">
       <div className="navbar lg:w-10/12 mx-auto px-4 py-3 flex justify-between items-center">
         <div className="navbar-start">
           <a className="lg:text-3xl text-2xl font-semibold">
