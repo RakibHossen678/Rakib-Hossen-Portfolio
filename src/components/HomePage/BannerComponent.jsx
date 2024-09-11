@@ -6,13 +6,13 @@ import Link from "next/link";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Banner = () => {
-  // Animation variants
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3, // Staggered animation for child elements
+        staggerChildren: 0.3, 
       },
     },
   };
@@ -47,7 +47,7 @@ const Banner = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* Left Side: Text Content */}
+      
         <motion.div
           className="text-center lg:text-left mb-10 lg:mb-0"
           variants={textVariants}
@@ -124,7 +124,7 @@ const Banner = () => {
           </div>
         </motion.div>
 
-        {/* Right Side: Profile Image */}
+      
         <motion.div
           className="mt-12 lg:mt-0 lg:ml-12 w-[300px] lg:w-[400px] h-auto"
           whileHover={{ scale: 1.1, rotate: 3 }}
