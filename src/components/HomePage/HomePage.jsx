@@ -14,7 +14,7 @@ const HomePage = () => {
         <div className="absolute inset-0 -z-20 m-auto h-[310px] w-[310px] rounded-full bg-gray-400 opacity-20 blur-[100px]"></div>
       </div>
 
-      <div className="lg:w-9/12 w-11/12 mx-auto relative z-10">
+      <div className="lg:w-9/12  w-11/12 mx-auto relative z-10">
         {/* Banner Section */}
         <BannerComponent />
 
