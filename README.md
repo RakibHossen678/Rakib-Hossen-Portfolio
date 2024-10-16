@@ -18,9 +18,9 @@ npm run dev
 
 I'm Rakib Hossen, a front-end developer skilled in building user-friendly, dynamic websites using:
 
-- **Languages**: HTML5, CSS3, JavaScript (ES6+)
-- **Frameworks/Libraries**: React.js, Express.js, Bootstrap, Tailwind CSS
-- **Databases**: MongoDB, Firebase
+- **Languages**: HTML5, CSS3, JavaScript
+- **Frameworks/Libraries**: Next.js, Express.js, Bootstrap, Tailwind CSS
+- **Databases**: MongoD
 - **Tools**: GitHub, Framer Motion
 
 I have experience creating responsive web applications, integrating user-friendly designs, and working with modern technologies.
