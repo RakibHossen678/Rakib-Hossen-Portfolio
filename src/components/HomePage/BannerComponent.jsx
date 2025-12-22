@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +21,7 @@ const Banner = () => {
     }, 100);
     
     return () => clearInterval(typingInterval);
-  }, []);
+  }, []); // Empty dependency array since fullText is constant
 
   const containerVariants = {
     hidden: { opacity: 0 },
