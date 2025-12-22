@@ -31,121 +31,153 @@ const Contact = () => {
       <div className="flex flex-col lg:flex-row items-center lg:gap-36 gap-4 mt-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="p-4 py-6 w-full rounded-lg bg-gray-50 md:p-8"
+          className="p-4 py-6 w-full rounded-2xl bg-white/80 backdrop-blur-lg shadow-2xl border border-white/20 md:p-8"
         >
           <form onSubmit={handleEmail}>
             <div className="-mx-2 md:items-center md:flex">
               <div className="flex-1 px-2">
-                <label className="block mb-2 text-sm text-gray-700">Name</label>
-                <input
+                <label className="block mb-2 text-sm text-gray-700 font-semibold">Name</label>
+                <motion.input
                   type="text"
                   placeholder="Enter Your Name"
                   name="name"
-                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
+                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-all duration-300"
+                  whileFocus={{ scale: 1.02 }}
                 />
               </div>
 
               <div className="flex-1 px-2 mt-4 md:mt-0">
-                <label className="block mb-2 text-sm text-gray-600">
+                <label className="block mb-2 text-sm text-gray-700 font-semibold">
                   Subject
                 </label>
-                <input
+                <motion.input
                   type="text"
                   placeholder="Enter Your Subject"
                   name="subject"
-                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
+                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-all duration-300"
+                  whileFocus={{ scale: 1.02 }}
                 />
               </div>
             </div>
 
             <div className="mt-4">
-              <label className="block mb-2 text-sm text-gray-600">
+              <label className="block mb-2 text-sm text-gray-700 font-semibold">
                 Email address
               </label>
-              <input
+              <motion.input
                 type="email"
                 placeholder="Enter Your Email"
                 name="email"
-                className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-primary dark:focus:border-blue-400 focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
+                className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-all duration-300"
+                whileFocus={{ scale: 1.02 }}
               />
             </div>
 
             <div className="w-full mt-4">
-              <label className="block mb-2 text-sm text-gray-600">
+              <label className="block mb-2 text-sm text-gray-700 font-semibold">
                 Message
               </label>
-              <textarea
-                className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
+              <motion.textarea
+                className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg md:h-56 focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-all duration-300"
                 placeholder="Enter Message"
                 name="message"
-              ></textarea>
+                whileFocus={{ scale: 1.02 }}
+              ></motion.textarea>
             </div>
 
-            <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-transform duration-300 transform bg-primary rounded-lg focus:ring-opacity-50 hover:scale-105 hover:bg-primary-dark">
-              Send message
-            </button>
+            <motion.button 
+              className="relative w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize rounded-full overflow-hidden group shadow-lg"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className="relative z-10">Send message</span>
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-r from-primary to-secondary"
+                initial={{ x: 0 }}
+              />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-secondary to-primary"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.button>
           </form>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="space-y-6 w-full"
         >
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            className="flex items-center space-x-5"
+            className="flex items-center space-x-5 p-4 rounded-2xl bg-white/80 backdrop-blur-lg shadow-lg border border-white/20 hover:shadow-xl transition-shadow duration-300"
           >
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <FaPhoneVolume
-                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
+                className="bg-gradient-to-br from-primary to-secondary text-white rounded-full p-2"
                 size={40}
               />
-            </div>
+            </motion.div>
             <div>
-              <h1 className="text-lg">Phone</h1>
-              <h1 className="text-lg font-semibold">+8801933796400</h1>
+              <h1 className="text-lg font-semibold text-gray-700">Phone</h1>
+              <h1 className="text-lg font-bold text-secondary">+8801933796400</h1>
             </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-            className="flex items-center space-x-5"
+            className="flex items-center space-x-5 p-4 rounded-2xl bg-white/80 backdrop-blur-lg shadow-lg border border-white/20 hover:shadow-xl transition-shadow duration-300"
           >
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <MdOutlineMailOutline
-                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
+                className="bg-gradient-to-br from-primary to-secondary text-white rounded-full p-2"
                 size={40}
               />
-            </div>
+            </motion.div>
             <div>
-              <h1 className="text-lg">Email</h1>
-              <h1 className="text-lg font-semibold">rh491464@gmail.com</h1>
+              <h1 className="text-lg font-semibold text-gray-700">Email</h1>
+              <h1 className="text-lg font-bold text-secondary">rh491464@gmail.com</h1>
             </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-            className="flex items-center space-x-5"
+            className="flex items-center space-x-5 p-4 rounded-2xl bg-white/80 backdrop-blur-lg shadow-lg border border-white/20 hover:shadow-xl transition-shadow duration-300"
           >
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <IoLocationSharp
-                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
+                className="bg-gradient-to-br from-primary to-secondary text-white rounded-full p-2"
                 size={40}
               />
-            </div>
+            </motion.div>
             <div>
-              <h1 className="text-lg">Address</h1>
-              <h1 className="text-lg font-semibold">
+              <h1 className="text-lg font-semibold text-gray-700">Address</h1>
+              <h1 className="text-lg font-bold text-secondary">
                 Textile, 2no Gate,
                 <br /> Chattogram, Bangladesh
               </h1>

@@ -5,10 +5,23 @@ import BannerComponent from "./BannerComponent.jsx";
 import ProjectComponent from "./ProjectComponent.jsx";
 import ContactComponent from "./ContactComponent.jsx";
 import TechnicalComponent from "./TechnicalComponent.jsx";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
       {/* Background Effect */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-purple-100 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
         <div className="absolute inset-0 -z-20 m-auto h-[310px] w-[310px] rounded-full bg-gray-400 opacity-20 blur-[100px]"></div>
@@ -19,50 +32,130 @@ const HomePage = () => {
         <BannerComponent />
 
         {/* About Section */}
-        <div className="my-20">
+        <motion.div 
+          className="my-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
           <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
-              About <span className="text-primary">Me</span>
-            </h1>
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-4xl lg:text-5xl font-semibold">
+                About <span className="gradient-text">Me</span>
+              </h1>
+              <motion.div 
+                className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"
+                initial={{ width: 0 }}
+                whileInView={{ width: 96 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+            </motion.div>
           </div>
           <AboutComponent />
-        </div>
+        </motion.div>
 
         {/* Skills Section */}
-        <div className="my-20">
+        <motion.div 
+          className="my-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold mb-2 text-gray-800">
-              My Skills
-            </h2>
-            <p className="text-gray-600 text-lg font-medium mt-2">
-              My Technical Level
-            </p>
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-4xl font-extrabold mb-2 text-gray-800">
+                My <span className="gradient-text">Skills</span>
+              </h2>
+              <p className="text-gray-600 text-lg font-medium mt-2">
+                My Technical Level
+              </p>
+              <motion.div 
+                className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"
+                initial={{ width: 0 }}
+                whileInView={{ width: 96 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+            </motion.div>
           </div>
           <TechnicalComponent />
-        </div>
+        </motion.div>
 
         {/* Projects Section */}
-        <div className="my-20">
+        <motion.div 
+          className="my-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
           <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
-              Latest <span className="text-primary">Projects</span>
-            </h1>
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-4xl lg:text-5xl font-semibold">
+                Latest <span className="gradient-text">Projects</span>
+              </h1>
+              <motion.div 
+                className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"
+                initial={{ width: 0 }}
+                whileInView={{ width: 96 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+            </motion.div>
           </div>
           <ProjectComponent />
-        </div>
+        </motion.div>
 
         {/* Contact Section */}
-        <div className="mt-20">
+        <motion.div 
+          className="mt-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
           <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
-              Contact <span className="text-primary">Me</span>
-            </h1>
-            <p className="text-gray-600 text-lg font-medium mt-2">
-              Get In Touch
-            </p>
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-4xl lg:text-5xl font-semibold">
+                Contact <span className="gradient-text">Me</span>
+              </h1>
+              <p className="text-gray-600 text-lg font-medium mt-2">
+                Get In Touch
+              </p>
+              <motion.div 
+                className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"
+                initial={{ width: 0 }}
+                whileInView={{ width: 96 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+            </motion.div>
           </div>
           <ContactComponent />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
