@@ -28,18 +28,18 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+      <div className="grid grid-cols-1 items-start gap-4 sm:gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="w-full rounded-2xl border border-slate-700 bg-slate-900/60 p-6 md:p-8"
+          className="w-full rounded-2xl border border-slate-700 bg-slate-900/60 p-4 sm:p-6 md:p-8"
         >
-          <div className="mb-6">
-            <h3 className="text-2xl font-semibold text-white">
+          <div className="mb-5 sm:mb-6">
+            <h3 className="text-xl font-semibold text-white sm:text-2xl">
               Start a Conversation
             </h3>
-            <p className="mt-2 text-sm text-slate-300 md:text-base">
+            <p className="mt-2 text-sm leading-relaxed text-slate-300 md:text-base">
               Share your goals and timeline. I’ll get back with a clear and
               practical plan.
             </p>
@@ -104,11 +104,11 @@ const Contact = () => {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="w-full space-y-4"
         >
-          <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-6">
-            <h3 className="text-2xl font-semibold text-white">
+          <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-4 sm:p-6">
+            <h3 className="text-xl font-semibold text-white sm:text-2xl">
               Direct Contact
             </h3>
-            <p className="mt-2 text-sm text-slate-300">
+            <p className="mt-2 text-sm leading-relaxed text-slate-300">
               Prefer a quick discussion? Reach me through the details below.
             </p>
           </div>
@@ -117,19 +117,19 @@ const Contact = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.05, ease: "easeOut" }}
-            className="flex items-center gap-4 rounded-xl border border-slate-700 bg-slate-900/60 p-5"
+            className="flex items-start gap-3 rounded-xl border border-slate-700 bg-slate-900/60 p-4 sm:items-center sm:gap-4 sm:p-5"
           >
             <div>
               <FaPhoneVolume
                 className="rounded-full bg-secondary p-2 text-white"
-                size={38}
+                size={34}
               />
             </div>
             <div>
               <h1 className="text-sm uppercase tracking-wider text-slate-400">
                 Phone
               </h1>
-              <h1 className="text-base font-semibold text-white">
+              <h1 className="text-sm font-semibold text-white sm:text-base">
                 +880 1933-796400
               </h1>
             </div>
@@ -139,22 +139,22 @@ const Contact = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.1, ease: "easeOut" }}
-            className="flex items-center gap-4 rounded-xl border border-slate-700 bg-slate-900/60 p-5"
+            className="flex items-start gap-3 rounded-xl border border-slate-700 bg-slate-900/60 p-4 sm:items-center sm:gap-4 sm:p-5"
           >
             <div>
               <MdOutlineMailOutline
                 className="rounded-full bg-secondary p-2 text-white"
-                size={38}
+                size={34}
               />
             </div>
-            <div>
+            <div className="min-w-0">
               <h1 className="text-sm uppercase tracking-wider text-slate-400">
                 Email
               </h1>
-              <h1 className="text-base font-semibold text-white">
-              rakib.hossen.webdev@gmail.com
+              <h1 className="break-all text-sm font-semibold text-white sm:text-base">
+                rakib.hossen.webdev@gmail.com
               </h1>
-              <h1 className="text-base font-semibold text-white">
+              <h1 className="break-all text-sm font-semibold text-white sm:text-base">
                 rh491464@gmail.com
               </h1>
             </div>
@@ -164,19 +164,19 @@ const Contact = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.15, ease: "easeOut" }}
-            className="flex items-center gap-4 rounded-xl border border-slate-700 bg-slate-900/60 p-5"
+            className="flex items-start gap-3 rounded-xl border border-slate-700 bg-slate-900/60 p-4 sm:items-center sm:gap-4 sm:p-5"
           >
             <div>
               <IoLocationSharp
                 className="rounded-full bg-secondary p-2 text-white"
-                size={38}
+                size={34}
               />
             </div>
             <div>
               <h1 className="text-sm uppercase tracking-wider text-slate-400">
                 Address
               </h1>
-              <h1 className="text-base font-semibold text-white">
+              <h1 className="text-sm font-semibold text-white sm:text-base">
                 Textile, 2no Gate,
                 <br /> Chattogram, Bangladesh
               </h1>
