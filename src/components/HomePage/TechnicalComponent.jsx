@@ -1,39 +1,99 @@
-'use client';
+"use client";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { FaDatabase, FaLaptopCode } from "react-icons/fa";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { SiFramework } from "react-icons/si";
+import { portfolioData } from "@/lib/portfolioData";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { staggerContainer, fadeUp } from "@/lib/motionVariants";
 
 const TechnicalComponent = () => {
-  const skills = [
-    { src: "/html.png", alt: "HTML", label: "HTML" },
-    { src: "/css.png", alt: "CSS", label: "CSS" },
-    { src: "/tailwind.png", alt: "Tailwind CSS", label: "Tailwind CSS" },
-    { src: "/javascript.png", alt: "JavaScript", label: "JavaScript" },
-    { src: "/react.png", alt: "React JS", label: "React JS" },
-    { src: "/nextjs.png", alt: "Next JS", label: "Next JS" },
-    { src: "/expressjs.png", alt: "Express JS", label: "Express JS" },
-    { src: "/mongodb.png", alt: "MongoDB", label: "MongoDB" },
-    { src: "/firebase.png", alt: "Firebase", label: "Firebase" },
-    { src: "/github.png", alt: "Github", label: "Github" },
-    { src: "/bootstrap.png", alt: "Bootstrap", label: "Bootstrap" },
-  ];
+  const skillsRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray(".skill-fill").forEach((bar) => {
+        const target = Number(bar.dataset.level || 75);
+
+        gsap.fromTo(
+          bar,
+          { width: "0%" },
+          {
+            width: `${target}%`,
+            duration: 1.1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: bar,
+              start: "top 88%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+      });
+    }, skillsRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const icons = {
+    Frontend: <FaLaptopCode size={18} />,
+    Backend: <SiFramework size={18} />,
+    Database: <FaDatabase size={18} />,
+    Workflow: <MdOutlineDesignServices size={18} />,
+  };
+
+  const proficiencyByGroup = {
+    Frontend: 93,
+    Backend: 89,
+    Database: 86,
+    Workflow: 88,
+  };
 
   return (
-    <section className="py-16 px-4 text-center  ">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-        {skills.map((skill) => (
+    <section ref={skillsRef} className="px-1">
+      <motion.div
+        className="grid grid-cols-1 gap-4 md:grid-cols-2"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {portfolioData.skillGroups.map((group) => (
           <motion.div
-            key={skill.label}
-            className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:bg-primary/10 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
+            key={group.title}
+            variants={fadeUp}
+            className="rounded-xl border border-slate-700 bg-slate-900/70 p-5"
+            whileHover={{ y: -4 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="w-20 h-20 flex items-center justify-center  rounded-full mb-4">
-              <Image src={skill.src} alt={skill.alt} width={64} height={64} />
+            <div className="mb-4 flex items-center gap-2 text-primary">
+              <span className="rounded-md bg-slate-800 p-2">
+                {icons[group.title]}
+              </span>
+              <h3 className="text-lg font-semibold text-white">
+                {group.title}
+              </h3>
             </div>
-            <p className="text-lg font-semibold text-gray-700">{skill.label}</p>
+
+            
+
+            <div className="flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-md border border-slate-700 bg-slate-800/60 px-2.5 py-1 text-xs font-medium text-slate-200 md:text-sm"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

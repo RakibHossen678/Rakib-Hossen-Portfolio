@@ -1,21 +1,21 @@
-
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-6 bg-primary/20 text-black">
-      <div className="container mx-auto flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+    <footer className="border-t border-slate-800/80 bg-slate-950/80 px-4 py-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-5 md:flex-row md:px-8">
         <aside className="text-center md:text-left">
-          <p className="text-sm">
-            © {new Date().getFullYear()} Rakib Hossen. All rights reserved.
+          <p className="text-sm text-slate-400">
+            © {new Date().getFullYear()} Rakib Hossen — MERN Stack Developer at
+            Zentexx.
           </p>
         </aside>
 
-        <div className="flex space-x-6">
+        <div className="flex items-center gap-5">
           <a
             href="https://www.facebook.com/profile.php?id=100056015882794"
             aria-label="Facebook"
-            className="hover:text-purple-500 transition-colors"
+            className="text-slate-400 transition hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -24,7 +24,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/hossen-rakib/"
             aria-label="LinkedIn"
-            className="hover:text-purple-600 transition-colors"
+            className="text-slate-400 transition hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -33,7 +33,7 @@ const Footer = () => {
           <a
             href="https://github.com/RakibHossen678"
             aria-label="Github"
-            className="hover:text-pruple-500 transition-colors"
+            className="text-slate-400 transition hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >

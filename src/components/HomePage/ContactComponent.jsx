@@ -27,125 +27,156 @@ const Contact = () => {
   };
 
   return (
-    <div className="pb-20 px-4 lg:px-12">
-      <div className="flex flex-col lg:flex-row items-center lg:gap-36 gap-4 mt-6">
+    <div>
+      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="p-4 py-6 w-full rounded-lg bg-gray-50 md:p-8"
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="w-full rounded-2xl border border-slate-700 bg-slate-900/60 p-6 md:p-8"
         >
+          <div className="mb-6">
+            <h3 className="text-2xl font-semibold text-white">
+              Start a Conversation
+            </h3>
+            <p className="mt-2 text-sm text-slate-300 md:text-base">
+              Share your goals and timeline. I’ll get back with a clear and
+              practical plan.
+            </p>
+          </div>
           <form onSubmit={handleEmail}>
-            <div className="-mx-2 md:items-center md:flex">
-              <div className="flex-1 px-2">
-                <label className="block mb-2 text-sm text-gray-700">Name</label>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div>
+                <label className="mb-2 block text-sm text-slate-300">
+                  Name
+                </label>
                 <input
                   type="text"
                   placeholder="Enter Your Name"
                   name="name"
-                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
+                  className="mt-1.5 block w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-2.5 text-slate-100 placeholder:text-slate-500 focus:border-primary focus:outline-none"
                 />
               </div>
 
-              <div className="flex-1 px-2 mt-4 md:mt-0">
-                <label className="block mb-2 text-sm text-gray-600">
+              <div>
+                <label className="mb-2 block text-sm text-slate-300">
                   Subject
                 </label>
                 <input
                   type="text"
                   placeholder="Enter Your Subject"
                   name="subject"
-                  className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
+                  className="mt-1.5 block w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-2.5 text-slate-100 placeholder:text-slate-500 focus:border-primary focus:outline-none"
                 />
               </div>
             </div>
 
             <div className="mt-4">
-              <label className="block mb-2 text-sm text-gray-600">
+              <label className="mb-2 block text-sm text-slate-300">
                 Email address
               </label>
               <input
                 type="email"
                 placeholder="Enter Your Email"
                 name="email"
-                className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-primary dark:focus:border-blue-400 focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
+                className="mt-1.5 block w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-2.5 text-slate-100 placeholder:text-slate-500 focus:border-primary focus:outline-none"
               />
             </div>
 
-            <div className="w-full mt-4">
-              <label className="block mb-2 text-sm text-gray-600">
+            <div className="mt-4 w-full">
+              <label className="mb-2 block text-sm text-slate-300">
                 Message
               </label>
               <textarea
-                className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 focus:border-primary dark:focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 transition-colors duration-300 ease-in-out hover:border-primary-light"
+                className="mt-1.5 block h-40 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-2.5 text-slate-100 placeholder:text-slate-500 focus:border-primary focus:outline-none md:h-52"
                 placeholder="Enter Message"
                 name="message"
               ></textarea>
             </div>
 
-            <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-transform duration-300 transform bg-primary rounded-lg focus:ring-opacity-50 hover:scale-105 hover:bg-primary-dark">
-              Send message
-            </button>
+            <button className="primary-btn mt-5 w-full">Send message</button>
           </form>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 25 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="space-y-6 w-full"
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="w-full space-y-4"
         >
+          <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-6">
+            <h3 className="text-2xl font-semibold text-white">
+              Direct Contact
+            </h3>
+            <p className="mt-2 text-sm text-slate-300">
+              Prefer a quick discussion? Reach me through the details below.
+            </p>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            className="flex items-center space-x-5"
+            transition={{ duration: 0.35, delay: 0.05, ease: "easeOut" }}
+            className="flex items-center gap-4 rounded-xl border border-slate-700 bg-slate-900/60 p-5"
           >
             <div>
               <FaPhoneVolume
-                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
-                size={40}
+                className="rounded-full bg-secondary p-2 text-white"
+                size={38}
               />
             </div>
             <div>
-              <h1 className="text-lg">Phone</h1>
-              <h1 className="text-lg font-semibold">+8801933796400</h1>
+              <h1 className="text-sm uppercase tracking-wider text-slate-400">
+                Phone
+              </h1>
+              <h1 className="text-base font-semibold text-white">
+                +880 1933-796400
+              </h1>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-            className="flex items-center space-x-5"
+            transition={{ duration: 0.35, delay: 0.1, ease: "easeOut" }}
+            className="flex items-center gap-4 rounded-xl border border-slate-700 bg-slate-900/60 p-5"
           >
             <div>
               <MdOutlineMailOutline
-                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
-                size={40}
+                className="rounded-full bg-secondary p-2 text-white"
+                size={38}
               />
             </div>
             <div>
-              <h1 className="text-lg">Email</h1>
-              <h1 className="text-lg font-semibold">rh491464@gmail.com</h1>
+              <h1 className="text-sm uppercase tracking-wider text-slate-400">
+                Email
+              </h1>
+              <h1 className="text-base font-semibold text-white">
+              rakib.hossen.webdev@gmail.com
+              </h1>
+              <h1 className="text-base font-semibold text-white">
+                rh491464@gmail.com
+              </h1>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-            className="flex items-center space-x-5"
+            transition={{ duration: 0.35, delay: 0.15, ease: "easeOut" }}
+            className="flex items-center gap-4 rounded-xl border border-slate-700 bg-slate-900/60 p-5"
           >
             <div>
               <IoLocationSharp
-                className="bg-secondary text-white rounded-full p-2 transition-transform duration-300 ease-in-out hover:scale-110"
-                size={40}
+                className="rounded-full bg-secondary p-2 text-white"
+                size={38}
               />
             </div>
             <div>
-              <h1 className="text-lg">Address</h1>
-              <h1 className="text-lg font-semibold">
+              <h1 className="text-sm uppercase tracking-wider text-slate-400">
+                Address
+              </h1>
+              <h1 className="text-base font-semibold text-white">
                 Textile, 2no Gate,
                 <br /> Chattogram, Bangladesh
               </h1>

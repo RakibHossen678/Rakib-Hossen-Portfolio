@@ -1,49 +1,83 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const pathName = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const navItems = [
-    { title: "Home", path: "/" },
-    { title: "About", path: "/about" },
-    { title: "Skills", path: "/skill" },
-    { title: "Projects", path: "/projects" },
-    { title: "Contact", path: "/contact" },
+    { title: "Home", id: "home" },
+    { title: "Projects", id: "projects" },
+    { title: "Skills", id: "skills" },
+    { title: "Experience", id: "experience" },
+    { title: "Education", id: "education" },
+    { title: "About", id: "about" },
+    { title: "Contact", id: "contact" },
   ];
 
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (!element) {
+      return;
+    }
+
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+    setActiveSection(id);
+    setIsOpen(false);
+  };
+
   return (
-    <div className="bg-primary/20 fixed top-0 left-0 right-0 z-50 shadow-md">
-      <div className="navbar lg:w-10/12 mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="navbar-start">
-          <a className="lg:text-3xl text-2xl font-semibold">
-            Rakib <span className="text-primary">Hossen.</span>
-          </a>
-        </div>
-        <div className="navbar-end lg:flex hidden">
-          <ul className="flex space-x-8 menu-horizontal">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 md:px-8">
+        <button
+          onClick={() => handleScrollTo("home")}
+          className="text-left text-lg font-bold tracking-[0.04em] text-white md:text-2xl"
+          style={{
+            fontFamily: "var(--font-space), var(--font-inter), sans-serif",
+          }}
+          aria-label="Go to home section"
+        >
+          <span className="text-primary">&lt;</span>
+          <span className="bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">
+            Rakib Hossen
+          </span>
+          <span className="text-primary">/&gt;</span>
+        </button>
+
+        <div className="hidden lg:block">
+          <ul className="flex items-center gap-2 rounded-xl border border-slate-800 bg-slate-900/70 p-1">
             {navItems.map((item, idx) => (
               <li key={idx}>
-                <Link
-                  href={item.path}
+                <button
+                  onClick={() => handleScrollTo(item.id)}
                   className={`${
-                    pathName === item.path
-                      ? "text-secondary font-semibold border-b-2 border-b-secondary"
-                      : "font-medium text-gray-700 hover:text-secondary transition-colors duration-300"
+                    activeSection === item.id
+                      ? "rounded-lg bg-slate-800 px-3 py-2 font-semibold text-white"
+                      : "rounded-lg px-3 py-2 font-medium text-slate-300 transition hover:bg-slate-800/70 hover:text-white"
                   }`}
                 >
                   {item.title}
-                </Link>
+                </button>
               </li>
             ))}
+            <li>
+              <button
+                onClick={() => handleScrollTo("contact")}
+                className="primary-btn rounded-lg px-4 py-2 text-sm"
+              >
+                Hire Me
+              </button>
+            </li>
           </ul>
         </div>
+
         <div className="lg:hidden flex items-center">
-          <button onClick={() => setIsOpen(!isOpen)} className="btn btn-ghost">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="rounded-lg border border-slate-700 p-2 text-slate-200"
+            aria-label="Toggle menu"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -59,28 +93,41 @@ const Navbar = () => {
               />
             </svg>
           </button>
+
           <motion.ul
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -20 }}
-            transition={{ duration: 0.3 }}
-            className={`absolute top-16 right-0 mt-2 p-2 shadow-lg bg-[#E7DCFD] rounded-lg space-y-2 w-52 ${
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -12 }}
+            transition={{ duration: 0.2 }}
+            className={`absolute right-4 top-16 mt-2 w-56 space-y-1 rounded-xl border border-slate-700 bg-slate-900 p-2 shadow-xl ${
               isOpen ? "block" : "hidden"
             }`}
           >
             {navItems.map((item, idx) => (
               <li key={idx}>
-                <Link
-                  href={item.path}
-                  className="block text-gray-700 font-medium hover:text-secondary transition-colors duration-300"
+                <button
+                  onClick={() => handleScrollTo(item.id)}
+                  className={`block rounded-lg px-3 py-2 font-medium transition ${
+                    activeSection === item.id
+                      ? "bg-slate-800 text-white"
+                      : "text-slate-300 hover:bg-slate-800/70 hover:text-white"
+                  }`}
                 >
                   {item.title}
-                </Link>
+                </button>
               </li>
             ))}
+            <li>
+              <button
+                onClick={() => handleScrollTo("contact")}
+                className="primary-btn mt-1 w-full rounded-lg px-4 py-2 text-sm"
+              >
+                Hire Me
+              </button>
+            </li>
           </motion.ul>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 

@@ -3,56 +3,56 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
-const ProjectsCard = ({ item }) => {
-  const { title, description, image, link, github } = item;
+const ProjectsCard = ({ project }) => {
+  const { title, description, image, link, github } = project;
+
+  const ActionButton = ({ href, children, ariaLabel }) => (
+    <Link href={href} target="_blank" aria-label={ariaLabel}>
+      <motion.button
+        className="rounded-lg border border-slate-700 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-200 transition hover:border-primary hover:text-white md:text-sm"
+        whileHover={{ scale: 1.03 }}
+      >
+        {children}
+      </motion.button>
+    </Link>
+  );
 
   return (
     <motion.div
-      className="lg:group flex justify-center item-center"
+      className="group flex items-center justify-center"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      whileHover={{ scale: 1.02, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.15)" }}
+      whileHover={{ scale: 1.01 }}
     >
-      <div className="max-w-sm md:max-w-lg lg:max-w-lg    overflow-hidden bg-white rounded-lg shadow-md">
-        <motion.div
-          className="overflow-hidden"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        >
+      <div className="w-full overflow-hidden rounded-xl bg-slate-900/80 transition-shadow duration-300">
+        <motion.div className="relative h-56 overflow-hidden border-b border-slate-700">
           <Image
-            className="bg-cover lg:group-hover:scale-110 bg-center lg:h-64 w-full transition-transform duration-300"
+            className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
             src={image}
-            height={356}
-            width={400}
             alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </motion.div>
 
-        <div className="px-6 pt-3 pb-2 text-start flex flex-col flex-grow">
+        <div className="flex flex-col px-5 pb-5 pt-4 text-start">
           <div className="flex-grow">
-            <span className="text-2xl font-bold text-secondary">{title}</span>
-            <p className="mt-2 text-sm text-gray-600">{description}</p>
+            <h3 className="line-clamp-2 text-xl font-semibold text-white">
+              {title}
+            </h3>
+            <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-slate-300 md:text-base">
+              {description}
+            </p>
           </div>
-          <div className="my-4 flex justify-between items-center ">
-            <Link href={link} target="_blank">
-              <motion.button
-                className="border-2 text-secondary font-medium border-primary rounded-full lg:px-5 lg:py-2 px-4 py-2  hover:bg-primary hover:border-none hover:text-white transition-transform duration-300"
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                Live Demo
-              </motion.button>
-            </Link>
-            <Link href={github} target="_blank">
-              <motion.button
-                className="border-2 text-secondary font-medium border-primary rounded-full px-6 py-2 hover:bg-primary hover:border-none hover:text-white transition-transform duration-300"
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                Github
-              </motion.button>
-            </Link>
+          <div className="mt-6 flex items-center justify-between gap-3 whitespace-nowrap">
+            <ActionButton href={link} ariaLabel={`Explore ${title}`}>
+              Live Demo
+            </ActionButton>
+
+            <ActionButton href={github} ariaLabel={`View code for ${title}`}>
+              Source Code
+            </ActionButton>
           </div>
         </div>
       </div>

@@ -1,68 +1,130 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import AboutComponent from "./AboutComponent.jsx";
 import BannerComponent from "./BannerComponent.jsx";
-import ProjectComponent from "./ProjectComponent.jsx";
 import ContactComponent from "./ContactComponent.jsx";
 import TechnicalComponent from "./TechnicalComponent.jsx";
+import ExperienceComponent from "./ExperienceComponent.jsx";
+import FeaturedProjectsComponent from "./FeaturedProjectsComponent.jsx";
+import EducationComponent from "./EducationComponent.jsx";
+import SectionHeader from "@/components/shared/SectionHeader";
+import MotionSection from "@/components/animations/MotionSection";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HomePage = () => {
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray(".reveal-section").forEach((section) => {
+        gsap.fromTo(
+          section,
+          { opacity: 0, y: 26 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 84%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+      });
+    }, pageRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="relative min-h-screen">
-      {/* Background Effect */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-purple-100 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
-        <div className="absolute inset-0 -z-20 m-auto h-[310px] w-[310px] rounded-full bg-gray-400 opacity-20 blur-[100px]"></div>
-      </div>
+    <div id="home" ref={pageRef} className="relative min-h-screen">
+      <div className="mx-auto w-full max-w-6xl space-y-14 md:space-y-16">
+        <section id="hero" className="scroll-mt-24">
+          <BannerComponent />
+        </section>
 
-      <div className="lg:w-9/12  w-11/12 mx-auto relative z-10">
-        {/* Banner Section */}
-        <BannerComponent />
-
-        {/* About Section */}
-        <div className="my-20">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
-              About <span className="text-primary">Me</span>
-            </h1>
-          </div>
-          <AboutComponent />
-        </div>
-
-        {/* Skills Section */}
-        <div className="my-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold mb-2 text-gray-800">
-              My Skills
-            </h2>
-            <p className="text-gray-600 text-lg font-medium mt-2">
-              My Technical Level
-            </p>
-          </div>
+        <MotionSection
+          id="skills"
+          className="reveal-section section-shell scroll-mt-24 px-6 py-12 md:px-10"
+        >
+          <SectionHeader
+            eyebrow="Technical Depth"
+            title="Skills &"
+            accent="Stack"
+            description="Core technologies and engineering capabilities I use to build scalable web products."
+          />
           <TechnicalComponent />
-        </div>
+        </MotionSection>
 
-        {/* Projects Section */}
-        <div className="my-20">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
-              Latest <span className="text-primary">Projects</span>
-            </h1>
-          </div>
-          <ProjectComponent />
-        </div>
+        <MotionSection
+          id="experience"
+          className="reveal-section section-shell scroll-mt-24 px-6 py-12 md:px-10"
+        >
+          <SectionHeader
+            eyebrow="Professional Journey"
+            title="Experience &"
+            accent="Execution"
+            description="How I collaborate, ship features, and contribute to production-ready applications."
+          />
+          <ExperienceComponent />
+        </MotionSection>
 
-        {/* Contact Section */}
-        <div className="mt-20">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl text-secondary font-semibold">
-              Contact <span className="text-primary">Me</span>
-            </h1>
-            <p className="text-gray-600 text-lg font-medium mt-2">
-              Get In Touch
-            </p>
-          </div>
+        <MotionSection
+          id="education"
+          className="reveal-section section-shell scroll-mt-24 px-6 py-12 md:px-10"
+        >
+          <SectionHeader
+            eyebrow="Academic Journey"
+            title="Education"
+            accent="Background"
+            description="My academic path from school to higher education in computer science and engineering."
+          />
+          <EducationComponent />
+        </MotionSection>
+
+        <MotionSection
+          id="projects"
+          className="reveal-section section-shell scroll-mt-24 px-6 py-12 md:px-10"
+        >
+          <SectionHeader
+            eyebrow="Proof of Work"
+            title="Featured"
+            accent="Projects"
+            description="Selected projects that demonstrate product thinking, technical depth, and user-focused execution."
+          />
+          <FeaturedProjectsComponent />
+        </MotionSection>
+
+        <MotionSection
+          id="about"
+          className="reveal-section section-shell scroll-mt-24 px-6 py-12 md:px-10"
+        >
+          <SectionHeader
+            eyebrow="Personal Profile"
+            title="About"
+            accent="Me"
+            description="A concise overview of my development approach, engineering standards, and goals."
+          />
+          <AboutComponent />
+        </MotionSection>
+
+        <MotionSection
+          id="contact"
+          className="reveal-section section-shell scroll-mt-24 px-6 py-12 md:px-10"
+        >
+          <SectionHeader
+            eyebrow="Next Step"
+            title="Let’s Build"
+            accent="Together"
+            description="Share your project scope and goals. I’ll respond with a practical, product-focused approach."
+          />
           <ContactComponent />
-        </div>
+        </MotionSection>
       </div>
     </div>
   );

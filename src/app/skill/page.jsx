@@ -1,28 +1,25 @@
 import TechnicalComponent from "@/components/HomePage/TechnicalComponent";
 import React from "react";
+import MotionSection from "@/components/animations/MotionSection";
 
 const SkillPage = () => {
   return (
-    <div>
-      <div
-        className="hero lg:min-h-[300px]"
-        style={{
-          backgroundImage: "url('/cover.png')",
-        }}
-      >
-        <div className="hero-content text-neutral-content text-center">
-          <div className="text-center py-5">
-            <h1 className="text-4xl text-primary font-semibold">Skills</h1>
-            <p className="text-white pt-1 font-medium">
-              The Skills That Turn Ideas Into Reality
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-8 md:px-8 lg:px-12">
+      <MotionSection className="section-shell px-6 py-12 text-center md:px-10">
+        <h1 className="text-4xl font-semibold text-white md:text-5xl">
+          Technical <span className="text-primary">Skills</span>
+        </h1>
+        <p className="mx-auto mt-3 max-w-2xl text-slate-300">
+          The stack I use to deliver modern and reliable web applications.
+        </p>
+      </MotionSection>
 
-      <div className="lg:w-8/12 w-full mx-auto">
+      <MotionSection
+        className="section-shell mt-8 px-6 py-10 md:px-10"
+        amount={0.15}
+      >
         <TechnicalComponent />
-      </div>
+      </MotionSection>
     </div>
   );
 };
